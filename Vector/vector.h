@@ -7,7 +7,7 @@
  * USING:
  * - Vector_create - create a new vector
  * -  - Vector_insert - insert new data
- * -  - Vector_insert - get data at `index`
+ * -  - Vector_at 	  - get data at `index`
  * - Vector_clean - clean the vector
  */
 
