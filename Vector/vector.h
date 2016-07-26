@@ -28,9 +28,6 @@ void Vector_insert( Vector *vector, int data );
 // get element at index `index`
 int Vector_at( Vector* vector, uint32_t index );
 
-// resize the vector
-int* Vector_resize( Vector *vector, size_t length );
-
 // get the length of the vector
 size_t Vector_get_length( Vector* vector );
 
