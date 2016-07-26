@@ -2,17 +2,22 @@
 
 int top = -1;
 int data;
-int stack[5];
-int max = 5;
+int stack[8];
+int max = 8;
 
 int push(int data)
 {
 
-   if (isFull()==1)
-    return 0;
-   else
+   if (!isFull())
+
+
+   {
     top = (top+1);
-    top = data;
+    stack[top] = data;
+
+   }
+   else
+       printf("error::stack is full");
 
 }
 int pop()
@@ -20,11 +25,13 @@ int pop()
  if (!isFull())
  {
 
-  top = data;
+  data = stack[top];
   top = top-1;
   return data;
 
  }
+ else
+     printf("Stack is empty nothing to pop");
 }
  int isFull()
  {
