@@ -1,6 +1,6 @@
 #include "queue.h"
 
-queue* create(int max)
+queue* queue_create(int max)
 {
     queue* que = malloc(sizeof (queue));
 
@@ -13,9 +13,9 @@ queue* create(int max)
     return que;
 }
 
-void enqueue (queue* que, int element)
+void queue_enqueue (queue* que, int element)
 {
-    if (isFull(que))
+    if (queue_isFull(que))
         puts("queue is full!\n");
 
     else
@@ -29,9 +29,9 @@ void enqueue (queue* que, int element)
     return;
 }
 
-int dequeue (queue* que)
+int queue_dequeue (queue* que)
 {
-    if (isEmpty(que))
+    if (queue_isEmpty(que))
     {
         puts("queue is empty!\n");
         return 0;
@@ -46,7 +46,7 @@ int dequeue (queue* que)
     }
 }
 
-bool isEmpty(queue* que)
+bool queue_isEmpty(queue* que)
 {
     if (que->size == 0)
         return true;
@@ -55,7 +55,7 @@ bool isEmpty(queue* que)
         return false;
 }
 
-bool isFull(queue *que)
+bool queue_isFull(queue *que)
 {
     if (que->size == que->max)
         return true;
@@ -64,9 +64,9 @@ bool isFull(queue *que)
         return false;
 }
 
-int front(queue *que)
+int queue_front(queue *que)
 {
-    if(isEmpty(que))
+    if(queue_isEmpty(que))
         return 0;
 
     return que->elements[que->start];

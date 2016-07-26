@@ -25,19 +25,19 @@ typedef struct queue
 }queue;
 
 //create an empty queue with max number of elements as argumnet
-queue* create(int max);
+queue* queue_create(int max);
 
 //insert new element in queue q
-void enqueue (queue* que, int element);
+void queue_enqueue (queue* que, int element);
 
 //delete the first element in the queue q
-int dequeue(queue* que);
+int queue_dequeue(queue* que);
 
 //check if the queue is empty
-bool isEmpty(queue *que);
+bool queue_isEmpty(queue *que);
 
 //check wether the queue is full or not
-bool isFull(queue* que);
+bool queue_isFull(queue* que);
 
 //display the front element in the queue
-int front(queue* que);
+int queue_front(queue* que);
