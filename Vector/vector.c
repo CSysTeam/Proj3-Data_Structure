@@ -64,3 +64,14 @@ int Vector_at( Vector* vector, uint32_t index )
 {
 	return vector->data[index];
 }
+
+void Vector_clean( Vector* vector )
+{
+	free( vector->data );
+	vector->data   = NULL;
+	vector->index  = -1;
+	vector->length = 0;
+
+	free( vector );
+	vector = NULL;
+}
